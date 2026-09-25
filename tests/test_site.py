@@ -10,7 +10,7 @@ class PhotoFisherSiteTests(unittest.TestCase):
         return (ROOT / name).read_text(encoding="utf-8")
 
     def test_static_site_has_required_public_files(self):
-        for name in ("index.html", "privacy.html", "styles.css", "404.html", "README.md"):
+        for name in ("index.html", "privacy.html", "styles.css", "favicon.svg", "404.html", "README.md"):
             with self.subTest(name=name):
                 self.assertTrue((ROOT / name).is_file())
 
